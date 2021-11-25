@@ -144,6 +144,11 @@
   "resolved" "https://registry.npmjs.org/@napi-rs/triples/-/triples-1.0.3.tgz"
   "version" "1.0.3"
 
+"@next-auth/prisma-adapter@^0.5.2-next.19":
+  "integrity" "sha512-146DWE4PEbgVKF6W0CjJSxeP2rrw2T2s8zX1GQzbQsMK8trRSzheURJRphCn6ZGhVSpHJhU4NZe7F0kwRL5lwQ=="
+  "resolved" "https://registry.npmjs.org/@next-auth/prisma-adapter/-/prisma-adapter-0.5.2-next.19.tgz"
+  "version" "0.5.2-next.19"
+
 "@next/env@12.0.4":
   "integrity" "sha512-QtZ6X5c6Zqa7oWs5csEmZ7xy+gLdtRKKg02SOT5l0Ziea4P5IU8mSOCyNC4fZmXewcRVjpbY+yGqAAP7hJUfOA=="
   "resolved" "https://registry.npmjs.org/@next/env/-/env-12.0.4.tgz"
@@ -219,7 +224,7 @@
   "resolved" "https://registry.npmjs.org/@panva/hkdf/-/hkdf-1.0.1.tgz"
   "version" "1.0.1"
 
-"@prisma/client@^3.5.0":
+"@prisma/client@^3.5.0", "@prisma/client@>=2.26.0":
   "integrity" "sha512-LuaaisknLe9CCfJ1Rtqe9b9knvPgEEcC77OMmWdo3fSanxl5oTDxcH3IIhpULQQlJfZvDcaEXuXNU4dsNF+q1w=="
   "resolved" "https://registry.npmjs.org/@prisma/client/-/client-3.5.0.tgz"
   "version" "3.5.0"
@@ -2713,7 +2718,7 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next-auth@^4.0.0-beta.7":
+"next-auth@^4.0.0-beta.7", "next-auth@>4 || 4.0.0-beta.1 - 4.0.0-beta.x":
   "integrity" "sha512-bPoLak4MfmgrcLLaf26tEQttKJPBcP3KAtSXSo2xMhoG+PLnP9gwFmqLwFUX+FvVRf/iwuAUZjPRAqRQ9g3GOw=="
   "resolved" "https://registry.npmjs.org/next-auth/-/next-auth-4.0.0-beta.7.tgz"
   "version" "4.0.0-beta.7"
