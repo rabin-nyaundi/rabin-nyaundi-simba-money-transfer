@@ -10,12 +10,14 @@ let userAccount;
 const options = {
   session: {
     jwt: true,
+
     maxAge: 24 * 60 * 60,
-    secret: 'HlSQdy4rRkx4+1gdNtbLjSrRjTR9gfUY+GFW2TvYgKQ=',
+
   },
-  
-  cookie: {
-    secure: process.env.NODE_ENV && process.env.NODE_ENV === 'production',
+
+  jwt: {
+    secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
+    maxAge: 60 * 60 * 24 * 30,
   },
 
   providers: [
@@ -54,7 +56,7 @@ const options = {
   callbacks: {
     async session(session, token) {
       if (userAccount !== null) {
-        console.log("User Account ",userAccount);
+        console.log("User Account ", userAccount);
         session.user = userAccount;
       }
       console.log(session);
