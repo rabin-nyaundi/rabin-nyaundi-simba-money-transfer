@@ -80,9 +80,8 @@ const options = {
 
   session: {
     jwt: true,
-
     maxAge: 24 * 60 * 60,
-
+    strategy: "database",
   },
 
   jwt: {
