@@ -11,7 +11,7 @@ const options = {
   session: {
     jwt: true,
     maxAge: 24 * 60 * 60,
-    strategy: "database",
+    secret: 'HlSQdy4rRkx4+1gdNtbLjSrRjTR9gfUY+GFW2TvYgKQ=',
   },
   
   cookie: {
