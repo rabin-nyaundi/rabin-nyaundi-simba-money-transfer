@@ -58,16 +58,19 @@ const currency = [
         name: 'US Dollar',
         code: 'USD',
         icon: SupportIcon,
+        href: '#',
     },
     {
         name: 'European EURO',
         code: 'EUR',
         icon: BookmarkAltIcon,
+        href: '#',
     },
     {
         name: 'Nigerian Naira',
         code: 'NGN.',
         icon: CalendarIcon,
+        href: '#',
     },
 ]
 
