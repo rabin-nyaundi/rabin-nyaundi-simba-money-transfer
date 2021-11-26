@@ -8,18 +8,6 @@ const prisma = new PrismaClient();
 let userAccount;
 
 const options = {
-  session: {
-    jwt: true,
-
-    maxAge: 24 * 60 * 60,
-
-  },
-
-  jwt: {
-    secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
-    maxAge: 60 * 60 * 24 * 30,
-  },
-
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -52,6 +40,8 @@ const options = {
       },
     }),
   ],
+
+  secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
 
   callbacks: {
     async session(session, token) {
@@ -86,6 +76,18 @@ const options = {
       return Promise.resolve(token);
     },
 
+  },
+
+  session: {
+    jwt: true,
+
+    maxAge: 24 * 60 * 60,
+
+  },
+
+  jwt: {
+    secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
+    maxAge: 60 * 60 * 24 * 30,
   },
 
   pages: {
