@@ -76,12 +76,13 @@ const options = {
     },
 
   },
+  secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
 
   session: {
     jwt: true,
 
     maxAge: 24 * 60 * 60,
-    
+
     strategy: "jwt",
 
   },
