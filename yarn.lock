@@ -2718,10 +2718,10 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next-auth@^4.0.0-beta.7", "next-auth@>4 || 4.0.0-beta.1 - 4.0.0-beta.x":
-  "integrity" "sha512-bPoLak4MfmgrcLLaf26tEQttKJPBcP3KAtSXSo2xMhoG+PLnP9gwFmqLwFUX+FvVRf/iwuAUZjPRAqRQ9g3GOw=="
-  "resolved" "https://registry.npmjs.org/next-auth/-/next-auth-4.0.0-beta.7.tgz"
-  "version" "4.0.0-beta.7"
+"next-auth@^0.0.0-pr.3217.87a21677", "next-auth@>4 || 4.0.0-beta.1 - 4.0.0-beta.x":
+  "integrity" "sha512-1UaWM+vMbnGkilj4oOB7jYm+uNl4WOykdLkeKaD9m+3zVWPAYS09Bs5EUvycmTx9Ff1deSPU2Wni8ytQ2sa7fw=="
+  "resolved" "https://registry.npmjs.org/next-auth/-/next-auth-0.0.0-pr.3217.87a21677.tgz"
+  "version" "0.0.0-pr.3217.87a21677"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@panva/hkdf" "^1.0.0"

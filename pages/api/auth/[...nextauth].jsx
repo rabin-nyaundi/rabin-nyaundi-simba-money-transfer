@@ -1,5 +1,4 @@
 import NextAuth from "next-auth";
-// import prisma from "../../../lib/prisma";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { compare } from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
@@ -40,7 +39,27 @@ const options = {
       },
     }),
   ],
+
+  secret: 'Z2knOid/f9JZWVeAQJmxXXEt+MVYpZCn4JyPENhPXJY=',
   
+  session: {
+    // jwt: true,
+    maxAge: 24 * 60 * 60,
+    strategy: "jwt"
+  },
+
+
+  jwt: {
+    secret: 'ITCryLP6gNxLuxLAaKIPol/CfwfZWHla1Wo2uoZXzp0=',
+    maxAge: 60 * 60 * 24 * 30,
+    encryption: true
+  },
+
+  pages: {
+    error: "/auth/login",
+    signIn: "/auth/login",
+    signOut: "/auth/login",
+  },
 
   callbacks: {
     async session(session, token) {
@@ -49,16 +68,6 @@ const options = {
         session.user = userAccount;
       }
       console.log(session);
-      // else if (
-      //   typeof token.user !== typeof undefined &&
-      //   (typeof session.user === typeof undefined ||
-      //     (typeof session.user !== typeof undefined &&
-      //       typeof session.user.userId === typeof undefined))
-      // ) {
-      //   session.user = token.user;
-      // } else if (typeof token !== typeof undefined) {
-      //   session.token = token;
-      // }
       return Promise.resolve(session);
     },
 
@@ -69,33 +78,9 @@ const options = {
         token.accessToken = user.id.toString() + "-" + user.email + "-" + user.password;
       }
 
-      // if (user) {
-      //   token.user = user
-      // }
       return Promise.resolve(token);
     },
 
-  },
-  secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
-
-  session: {
-    jwt: true,
-
-    maxAge: 24 * 60 * 60,
-
-    strategy: "jwt",
-
-  },
-
-  jwt: {
-    secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
-    maxAge: 60 * 60 * 24 * 30,
-  },
-
-  pages: {
-    error: "/auth/login",
-    signIn: "/auth/login",
-    signOut: "/auth/login",
   },
 
 
