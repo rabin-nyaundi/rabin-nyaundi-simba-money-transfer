@@ -81,10 +81,6 @@ export default async function handler(req, res) {
     // return res.status(400).json({ message: "Invalid receiver account", status: 400 });
   }
 
-  console.log("====================================");
-  console.log(receiverAccount, "Receiver Account and balance");
-  console.log("====================================");
-
   // If it does not exist, rollback but create transaction to track
   if (senderAccount.balance < amount) {
     status = false;

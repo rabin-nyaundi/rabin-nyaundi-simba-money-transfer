@@ -298,7 +298,7 @@ export default function Header() {
                                         <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                                             {currency.map((item) => (
                                                 <Link
-                                                    href={`item.href`}
+                                                    href={item.href}
                                                     key={item.name}
                                                 >
                                                     <a
