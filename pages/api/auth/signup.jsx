@@ -73,7 +73,7 @@ export default async function handler(req, res) {
       });
 
       if (USDCurrency) {
-        const accountUSD = await prisma.account.findFirst({
+        const accountUSD = await prisma.accountB.findFirst({
           where: {
             AND: [
               {
@@ -90,7 +90,7 @@ export default async function handler(req, res) {
 
         if (!accountUSD) {
           
-          await prisma.account.create({
+          await prisma.accountB.create({
             data: {
               userId: user.id,
               currencyId: USDCurrency.id,

@@ -40,8 +40,7 @@ const options = {
       },
     }),
   ],
-
-  secret: 'Mv7dfWJiJbs3ghNiGMnBzbl9YJTQxqFSNXVNEDjSV50=',
+  
 
   callbacks: {
     async session(session, token) {
@@ -80,8 +79,11 @@ const options = {
 
   session: {
     jwt: true,
+
     maxAge: 24 * 60 * 60,
-    strategy: "database",
+    
+    strategy: "jwt",
+
   },
 
   jwt: {
